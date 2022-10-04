@@ -4,13 +4,13 @@
 % (c) 2020 Prof Dr Andreas Müller, Hochschule Rapperswil
 %
 \section{Beispiel einer Verfolgungskurve
-\label{lambertw:section:teil4}}
+	\label{lambertw:section:teil4}}
 \rhead{Beispiel einer Verfolgungskurve}
 In diesem Abschnitt wird rechnerisch das Beispiel einer Verfolgungskurve mit der Verfolgungsstrategie ``Jagd'' beschrieben. Dafür werden zuerst Bewegungsraum, Anfangspositionen und Bewegungsverhalten definiert, in einem nächsten Schritt soll eine Differentialgleichung dafür aufgestellt und anschliessend gelöst werden.
 
 \subsection{Anfangsbedingungen definieren und einsetzen
 	\label{lambertw:subsection:Anfangsbedingungen}}
-Das zu verfolgende Ziel \(Z\) bewegt sich entlang der \(y\)-Achse mit konstanter Geschwindigkeit \(|\dot{z}| = 1\), beginnend beim Ursprung des kartesischen Koordinatensystems. Der Verfolger \(V\) startet auf einem beliebigen Punkt im ersten Quadranten und bewegt sich auch mit konstanter Geschwindigkeit \(|\dot{v}| = 1\) in Richtung Ziel. Aus diesen Bedingungen ergibt sich den ersten Quadranten als Bewegungsraum für \(V\). Diese Anfangspunkte oder Anfangsbedingungen können wie folgt formuliert werden:
+Das zu verfolgende Ziel \(Z\) bewegt sich entlang der \(y\)-Achse mit konstanter Geschwindigkeit \(|\dot{z}| = 1\), beginnend beim Ursprung des kartesischen Koordinatensystems. Der Verfolger \(V\) startet auf einem beliebigen Punkt im ersten Quadranten und bewegt sich auch mit konstanter Geschwindigkeit \(|\dot{v}| = 1\) in Richtung Ziel. Aus diesen Bedingungen ergibt sich der erste Quadrant als Bewegungsraum für \(V\). Diese Anfangspunkte oder Anfangsbedingungen können wie folgt formuliert werden:
 \begin{equation}
 	Z
 	=
@@ -27,8 +27,8 @@ Das zu verfolgende Ziel \(Z\) bewegt sich entlang der \(y\)-Achse mit konstanter
 	1.
 	\label{lambertw:Anfangsbed}
 \end{equation}
-Wir haben nun die Anfangsbedingungen definiert, jetzt fehlt nur noch eine DGL, welche die fortlaufende Änderung der Position und Bewegungsrichtung des Verfolgers beschreibt. 
-Diese DGL haben wir bereits in Kapitel \ref{lambertw:subsection:Verfolger} definiert, und zwar Gleichung \eqref{lambertw:pursuerDGL}. Wenn man die Startpunkte einfügt, ergibt sich der Ausdruck
+Wir haben nun die Anfangsbedingungen definiert, jetzt fehlt nur noch eine Differentialgleichung, welche die fortlaufende Änderung der Position und Bewegungsrichtung des Verfolgers beschreibt. 
+Diese Differentialgleichung haben wir bereits in Abschnitt \ref{lambertw:subsection:Verfolger} definiert, und zwar Gleichung \eqref{lambertw:pursuerDGL}. Wenn man die Startpunkte einfügt, ergibt sich die Differentialgleichung
 \begin{equation}
 	\frac{\left( \begin{array}{c} 0-x \\ t-y \end{array} \right)}{\sqrt{x^2 + (t-y)^2}}
 	\cdot
@@ -42,15 +42,15 @@ Diese DGL haben wir bereits in Kapitel \ref{lambertw:subsection:Verfolger} defin
 	\label{lambertw:subsection:DGLvereinfach}}
 Nun haben wir eine Gleichung, es stellt sich aber die Frage, ob es überhaupt eine geschlossene Lösung dafür gibt. Eine Funktion welche die Beziehung \(y(x)\) beschreibt oder sogar \(x(t)\) und \(y(t)\) liefert. Zum jetzigen Zeitpunkt mag es nicht trivial scheinen, aber mit den gewählten Anfangsbedingungen \eqref{lambertw:Anfangsbed} ist es möglich, eine geschlossene Lösung für die Gleichung \eqref{lambertw:eqMitAnfangsbed} zu finden.
 
-Auf dem Weg dahin muss die definierte DGL zuerst wesentlich vereinfacht werden, sei es mittels algebraischer Umformungen oder mit den Tools aus der Analysis. Da die nächsten Schritte sehr algebralastig sind und sie das Lesen dieses Papers träge machen würden, werden wir uns hier nur auf die wesentlichsten Schritte konzentrieren, welche notwendig sind, um den Lösungsweg nachvollziehen zu können.
+Auf dem Weg dahin muss die definierte Differentialgleichung zuerst wesentlich vereinfacht werden, sei es mittels algebraischer Umformungen oder mit den Tools aus der Analysis. Da die nächsten Schritte sehr algebralastig sind und sie das Lesen dieses Papers träge machen würden, werden wir uns hier nur auf die wesentlichsten Schritte konzentrieren, welche notwendig sind, um den Lösungsweg nachvollziehen zu können.
 
 \subsubsection{Skalarprodukt auflösen
 	\label{lambertw:subsubsection:SkalProdAufl}}
 Zuerst müssen wir den Bruch und das Skalarprodukt in \eqref{lambertw:eqMitAnfangsbed} wegbringen, damit wir eine viel handlichere Differentialgleichung erhalten. Dies führt zu
 \begin{equation}
-		-x \cdot \dot{x} + (t-y) \cdot \dot{y}
-		= \sqrt{x^2 + (t-y)^2}.
-		\label{lambertw:eqOhneSkalarprod}
+	-x \cdot \dot{x} + (t-y) \cdot \dot{y}
+	= \sqrt{x^2 + (t-y)^2}.
+	\label{lambertw:eqOhneSkalarprod}
 \end{equation}
 Im letzten Schritt, fällt die Nützlichkeit des Skalarproduktes in der Verfolgungsgleichung \eqref{lambertw:pursuerDGL} markant auf. Anstatt zwei gekoppelte Differentialgleichungen zu erhalten, eine für die \(x\)- und die andere für die \(y\)-Komponente, erhält man einen einzigen Ausdruck, was in der Regel mit weniger Lösungsaufwand verbunden ist.
 
@@ -58,7 +58,7 @@ Im letzten Schritt, fällt die Nützlichkeit des Skalarproduktes in der Verfolgu
 	\label{lambertw:subsubsection:QuadUndGrup}}
 Mit der Quadratwurzel in \eqref{lambertw:eqOhneSkalarprod} kann man nichts anfangen, sie steht nur im Weg, also muss man sie loswerden. Wenn man dies macht, kann \eqref{lambertw:eqOhneSkalarprod} auf die Form  
 \begin{equation}
-	\left(\dot{x}^2-1\right) \cdot x^2 -2x \left(t-y\right) \dot{x}\dot{y} + \left(\dot{y}^2-1\right) \cdot \left(t-y\right)^2
+	(\dot{x}^2-1) \cdot x^2 -2x (t-y) \dot{x}\dot{y} + (\dot{y}^2-1) \cdot (t-y)^2
 	=0
 	\label{lambertw:eqOhneWurzel}
 \end{equation}
@@ -75,9 +75,9 @@ Wenn man beachtet, dass die Geschwindigkeit des Verfolgers konstant und gleich 1
 \end{equation}
 Umformungen der Gleichung \eqref{lambertw:eqGeschwSubst} können in \eqref{lambertw:eqOhneWurzel} erkannt werden. Wenn man sie ersetzt, erhält man
 \begin{equation}
-		\dot{y}^2 \cdot x^2 +2x \left(t-y\right) \dot{x}\dot{y} + \dot{x}^2 \cdot \left(t-y\right)^2
-		=0.
-		\label{lambertw:eqGeschwSubstituiert}
+	\dot{y}^2 \cdot x^2 +2x \left(t-y\right) \dot{x}\dot{y} + \dot{x}^2 \cdot \left(t-y\right)^2
+	=0.
+	\label{lambertw:eqGeschwSubstituiert}
 \end{equation}
 Diese unscheinbare Substitution führt dazu, dass weitere Vereinfachungen durchgeführt werden können.
 
@@ -90,7 +90,7 @@ Versteckt im Ausdruck \eqref{lambertw:eqGeschwSubstituiert} befindet sich die er
 	\label{lambertw:eqAlgVerinfacht}
 \end{equation}
 die faktorisierte Darstellung davon ist.
-Da der linke Term gleich Null ist, muss auch die Basis des Quadrates in \eqref{lambertw:eqAlgVerinfacht} gleich Null sein. Es ergibt sich eine weitere Vereinfachung, welche zu der im Vergleich zu \eqref{lambertw:eqOhneSkalarprod} wesentlich einfacheren DGL 
+Da der linke Term gleich Null ist, muss auch die Basis des Quadrates in \eqref{lambertw:eqAlgVerinfacht} gleich Null sein. Es ergibt sich eine weitere Vereinfachung, welche zu der im Vergleich zu \eqref{lambertw:eqOhneSkalarprod} wesentlich einfacheren Differentialgleichung 
 \begin{equation}
 	x \dot{y} + (t-y) \dot{x}
 	= 0
@@ -146,16 +146,16 @@ Wir wissen, dass sich der Verfolger mit Geschwindigkeit 1 bewegt, also legt er i
 	\label{lambertw:eqZuBogenlaenge}
 \end{equation}
 verbunden werden.
-  
+
 Nicht gerade auffällig ist die Richtung, in welche hier integriert wird. Wenn der Verfolger sich wie vorgesehen am Anfang im ersten Quadranten befindet, dann muss sich dieser nach links bewegen, was nicht der üblichen Integrationsrichtung entspricht. Um eine Integration wie üblich von links nach rechts ausführen zu können, müssen die Integrationsgrenzen vertauscht werden, was in einem Vorzeichenwechsel resultiert. 
 
-Wenn man nun \eqref{lambertw:eqZuBogenlaenge} in die DGL \eqref{lambertw:DGLmitT} einfügt, dann ergibt sich der neue Ausdruck
+Wenn man nun \eqref{lambertw:eqZuBogenlaenge} in die Differentialgleichung \eqref{lambertw:DGLmitT} einfügt, dann ergibt sich der neue Ausdruck
 \begin{equation}
 	x y^{\prime} - \int\sqrt{1+y^{\prime\, 2}} \: dx - y
 	= 0.
 	\label{lambertw:DGLohneT}
 \end{equation}
-Um das Integral los zu werden, leitet man \eqref{lambertw:DGLohneT} nach \(x\) ab und erhält die DGL zweiter Ordnung 
+Um das Integral los zu werden, leitet man \eqref{lambertw:DGLohneT} nach \(x\) ab und erhält die Differentialgleichung zweiter Ordnung 
 \begin{align}
 	y^{\prime}+ xy^{\prime\prime} - \sqrt{1+y^{\prime\, 2}} - y^{\prime}
 	&= 0, \\
@@ -167,7 +167,7 @@ Nun sind wir unserem Ziel einen weiteren Schritt näher. Die Gleichung \eqref{la
 
 \subsection{Differentialgleichung lösen
 	\label{lambertw:subsection:DGLloes}}
-Die Gleichung \eqref{lambertw:DGLohneInt} ist eine DGL zweiter Ordnung, in der \(y\) nicht vorkommt. Sie kann mittels der Substitution \(y^{\prime} = u\) in die DGL
+Die Gleichung \eqref{lambertw:DGLohneInt} ist eine Differentialgleichung zweiter Ordnung, in der \(y\) nicht vorkommt. Sie kann mittels der Substitution \(y^{\prime} = u\) in die Differentialgleichung
 \begin{equation}
 	xu^{\prime} - \sqrt{1+u^2}
 	= 0
@@ -191,7 +191,7 @@ Das Ergebnis ist
 	\operatorname{sinh}(\operatorname{ln}(x) + C).
 	\label{lambertw:loesDGLmitU}
 \end{align}
-Wenn man in \eqref{lambertw:loesDGLmitU} die Substitution rückgängig macht, erhält man die DGL 
+Wenn man in \eqref{lambertw:loesDGLmitU} die Substitution rückgängig macht, erhält man die Differentialgleichung 
 \begin{equation}
 	y^{\prime}
 	=
@@ -218,7 +218,7 @@ Nun haben wir eine Lösung, aber wie es immer mit Lösungen ist, stellt sich die
 	\centering
 	\includegraphics{papers/lambertw/Bilder/VerfolgungskurveBsp.png}
 	\caption[Graph der Verfolgungskurve]{Graph der Verfolgungskurve wobei, ({\color{red}rot}) die Funktion \ensuremath{y(x)} ist, ({\color{applegreen}grün}) der quadratische Teil und ({\color{blue}blau}) dem \ensuremath{\operatorname{ln}(x)}-Teil entspricht.
-	\label{lambertw:BildFunkLoes}
+		\label{lambertw:BildFunkLoes}
 	}
 \end{figure}
 
@@ -328,7 +328,7 @@ In diesem Abschnitt werden algebraische Umformungen ein wenig detaillierter als 
 
 \subsubsection{Zeitabhängigkeit wiederherstellen
 	\label{lambertw:subsubsection:ZeitabhWiederherst}}
-Der erste Schritt ist es herauszufinden, wie die Zeitabhängigkeit wieder hineingebracht werden kann. Dafür greifen wir auf die letzte Gleichung zu, in welcher \(t\) noch enthalten war, und zwar DGL 
+Der erste Schritt ist es herauszufinden, wie die Zeitabhängigkeit wieder hineingebracht werden kann. Dafür greifen wir auf die letzte Gleichung zu, in welcher \(t\) noch enthalten war, und zwar Differentialgleichung 
 \begin{equation}
 	x y^{\prime} + t - y
 	= 0
@@ -349,7 +349,7 @@ Wie in \eqref{lambertw:eqDGLmitTnochmals} zu sehen ist, werden \(y\) und deren A
 	\end{align}
 \end{subequations}
 
-Wenn man diese Gleichungen \eqref{lambertw:eqFunkUndAbleit} in die DGL \eqref{lambertw:eqDGLmitTnochmals} einfügt, vereinfacht und nach \(t\) auflöst, dann ergibt sich der Ausdruck
+Wenn man diese Gleichungen \eqref{lambertw:eqFunkUndAbleit} in die Differentialgleichung \eqref{lambertw:eqDGLmitTnochmals} einfügt, vereinfacht und nach \(t\) auflöst, dann ergibt sich der Ausdruck
 \begin{equation}
 	-4t
 	=
@@ -443,4 +443,4 @@ Nun, der Grund dafür ist die Struktur
 \end{equation}
 bei welcher \(p(x)\) eine beliebige Potenz von \(x\) darstellt. 
 
-Jedes Mal wenn \(x\) gesucht ist und in einer Struktur der Art \eqref{lambertw:eqEinsatzLambW} vorkommt, dann kann mit ein paar Umformungen die Struktur \(f(x)e^{f(x)}\) erzielt werden. Wie bereits in diesem Abschnitt \ref{lambertw:subsection:FunkNachT} gezeigt wurde, kann \(x\) nun mittels der \(W(x)\)-Funktion aufgelöst werden. Erstaunlicherweise ist \eqref{lambertw:eqEinsatzLambW} eine Struktur die oft vorkommt, was die Lambert-\(W\)-Funktion so wichtig macht.   
+Jedes Mal wenn \(x\) gesucht ist und in einer Struktur der Art \eqref{lambertw:eqEinsatzLambW} vorkommt, dann kann mit ein paar Umformungen die Struktur \(f(x)e^{f(x)}\) erzielt werden. Wie bereits in diesem Abschnitt \ref{lambertw:subsection:FunkNachT} gezeigt wurde, kann \(x\) nun mittels der \(W(x)\)-Funktion aufgelöst werden. Erstaunlicherweise ist \eqref{lambertw:eqEinsatzLambW} eine Struktur, die oft vorkommt, was die Lambert-\(W\)-Funktion so wichtig macht.   
